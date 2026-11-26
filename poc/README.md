@@ -87,6 +87,8 @@ docker exec -it mn.c2 bash
 # Check data from victim
 supervisorctl status
 supervisorctl tail -f heartbeat-server
+
+cat /var/log/heartbeat/requests.log
 ```
 
 ### Victim machine
