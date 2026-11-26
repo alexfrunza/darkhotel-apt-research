@@ -74,3 +74,77 @@ RESEARCH PAPERS
     re-originate TLS traffic, degrading connection security (including
     to update servers). Maps to the on-path hotel-network position
     DarkHotel used to inject fraudulent software updates.
+
+RESEARCH QUESTIONS
+
+[1] TorrentGuard (Kryczka et al., 2014)
+    RQ: How effective is DarkHotel's P2P/torrent vector as a broad
+    distribution channel compared with its targeted hotel-network
+    attacks, and could publisher-reputation detection (as proposed by
+    TorrentGuard) have disrupted it?
+    How we address it: Contrast TorrentGuard's finding that fake torrents
+    cluster around a small number of publisher IPs with Kaspersky's
+    account of DarkHotel seeding trojanized installers alongside popular
+    media. Argue whether IP/publisher-based reputation would have flagged
+    DarkHotel's seeders, and where it would fail (e.g. the payload being a
+    separate signed installer rather than the shared file itself).
+
+[2] Certified Malware (Kim et al., 2017)
+    RQ: Does the trust placed in the Windows code-signing PKI materially
+    increase the success of an APT like DarkHotel, and do reputation-based
+    successors (e.g. SmartScreen) close the gap that validly-signed
+    backdoors exploit?
+    How we address it: Map DarkHotel's signed backdoors onto the three
+    weakness classes Kim et al. identify, and discuss whether the group's
+    certificates fit the "compromised" or "impersonation/purchased"
+    pattern. Assess how much detection depends on revocation latency,
+    which the paper measures.
+
+[3] Targeted Attacks via an NGO (Le Blond et al., 2014)
+    RQ: DarkHotel is known for burning zero-days on high-value targets,
+    yet Le Blond et al. find targeted attacks mostly reuse disclosed
+    bugs; under what target conditions does an APT choose a zero-day over
+    a known exploit?
+    How we address it: Build a comparison of the two actors' exploit
+    economics (target value, discovery risk, patch state) and use it to
+    explain DarkHotel's split between cheap P2P spreading and expensive
+    hotel/zero-day operations.
+
+[4] Detecting Credential Spearphishing (Ho et al., 2017)
+    RQ: Can an enterprise-scale spearphishing detector built on
+    base-rate anomaly scoring realistically catch DarkHotel's
+    low-volume, highly-tailored spearphishing of travelling executives?
+    How we address it: Apply Ho et al.'s feature model (sender
+    reputation, URL/click features) to DarkHotel's documented lures, and
+    argue where it holds and where it breaks (very few targets, trusted
+    sender impersonation, attachment- rather than credential-based
+    payloads).
+
+[5] SoK: Eternal War in Memory (Szekeres et al., 2013)
+    RQ: Which of the defence policies categorised by Szekeres et al.
+    would have blocked DarkHotel's Flash/IE memory-corruption exploits
+    (e.g. CVE-2014-0497, CVE-2018-8373), and why were they insufficient
+    in practice?
+    How we address it: Place each DarkHotel CVE on the paper's
+    exploitation model, then check which deployed mitigations (DEP, ASLR,
+    etc.) it had to defeat and which proposed policies were not yet
+    shipping at the time of the attack.
+
+[6] Just-In-Time Code Reuse (Snow et al., 2013)
+    RQ: Does the JIT-ROP technique explain how DarkHotel reliably
+    exploited hardened, ASLR-protected client software, and what does
+    that imply for the value of fine-grained ASLR against this APT?
+    How we address it: Use JIT-ROP to argue why fine-grained
+    randomisation alone was not a sufficient barrier for DarkHotel's
+    class of targets, linking the paper's gadget-discovery model to the
+    group's scripted Flash/IE exploitation.
+
+[7] Security Impact of HTTPS Interception (Durumeric et al., 2017)
+    RQ: DarkHotel operated as an on-path adversary on hotel networks;
+    given Durumeric et al.'s finding that interception degrades TLS
+    security, would ubiquitous HTTPS plus update-signing have neutralised
+    the fake-update vector, or merely shifted it?
+    How we address it: Treat the hotel network as the malicious middlebox
+    the paper characterises, and reason about which defences (HSTS,
+    pinning, signed updates over TLS) would have closed the injection
+    point versus which the attacker could still work around.
