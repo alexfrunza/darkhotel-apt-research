@@ -1,6 +1,19 @@
 RESEARCH PAPERS
 
-[1] Doowon Kim, Bum Jun Kwon, and Tudor Dumitras. "Certified Malware:
+
+[1] Michal Kryczka, Ruben Cuevas, Roberto Gonzalez, Angel Cuevas, and
+    Arturo Azcorra. "TorrentGuard: Stopping scam and malware distribution
+    in the BitTorrent ecosystem." Computer Networks, vol. 59, 2014,
+    pp. 77-90. (ISSN 1389-1286)
+    Link: https://arxiv.org/abs/1105.3671
+    Relation: Large-scale measurement of fake/malicious content in
+    BitTorrent; finds that a large share of shared files are fake and
+    that almost all fake files link to malware or scam sites, often via
+    a link rather than the file itself. Maps directly to DarkHotel's P2P
+    vector, where trojanized installers were seeded on torrent networks
+    to spread its backdoor more broadly than its targeted hotel attacks.
+
+[2] Doowon Kim, Bum Jun Kwon, and Tudor Dumitras. "Certified Malware:
     Measuring Breaches of Trust in the Windows Code-Signing PKI." In
     Proceedings of the 2017 ACM SIGSAC Conference on Computer and
     Communications Security (CCS '17), Dallas, TX, USA, 2017,
@@ -11,7 +24,7 @@ RESEARCH PAPERS
     DarkHotel's use of digitally-signed backdoors to defeat trust-based
     defences.
 
-[2] Stevens Le Blond, Adina Uritesc, Cedric Gilbert, Zheng Leong Chua,
+[3] Stevens Le Blond, Adina Uritesc, Cedric Gilbert, Zheng Leong Chua,
     Prateek Saxena, and Engin Kirda. "A Look at Targeted Attacks Through
     the Lense of an NGO." In Proceedings of the 23rd USENIX Security
     Symposium (USENIX Security '14), San Diego, CA, USA, 2014,
@@ -22,7 +35,7 @@ RESEARCH PAPERS
     Maps to DarkHotel's selective targeting and its economising of
     zero-days for high-value victims only.
 
-[3] Grant Ho, Aashish Sharma, Mobin Javed, Vern Paxson, and David
+[4] Grant Ho, Aashish Sharma, Mobin Javed, Vern Paxson, and David
     Wagner. "Detecting Credential Spearphishing in Enterprise Settings."
     In Proceedings of the 26th USENIX Security Symposium (USENIX
     Security '17), Vancouver, BC, Canada, 2017, pp. 469-485.
@@ -31,7 +44,7 @@ RESEARCH PAPERS
     detector under extreme base-rate conditions. Maps to spear-phishing,
     DarkHotel's primary delivery vector after 2015 (defender's side).
 
-[4] Laszlo Szekeres, Mathias Payer, Tao Wei, and Dawn Song. "SoK:
+[5] Laszlo Szekeres, Mathias Payer, Tao Wei, and Dawn Song. "SoK:
     Eternal War in Memory." In Proceedings of the 2013 IEEE Symposium on
     Security and Privacy (S&P '13), Berkeley, CA, USA, 2013, pp. 48-62.
     Link: https://www.ieee-security.org/TC/SP2013/papers/4977a048.pdf
@@ -39,7 +52,7 @@ RESEARCH PAPERS
     to the Flash/IE zero-days DarkHotel exploited (e.g. CVE-2014-0497,
     CVE-2018-8373) and the mitigations such exploits must defeat.
 
-[5] Kevin Z. Snow, Fabian Monrose, Lucas Davi, Alexandra Dmitrienko,
+[6] Kevin Z. Snow, Fabian Monrose, Lucas Davi, Alexandra Dmitrienko,
     Christopher Liebchen, and Ahmad-Reza Sadeghi. "Just-In-Time Code
     Reuse: On the Effectiveness of Fine-Grained Address Space Layout
     Randomization." In Proceedings of the 2013 IEEE Symposium on
@@ -51,7 +64,7 @@ RESEARCH PAPERS
     technique class needed to reliably compromise the hardened client
     software DarkHotel targeted.
 
-[6] Zakir Durumeric, Zane Ma, Drew Springall, Richard Barnes, Nick
+[7] Zakir Durumeric, Zane Ma, Drew Springall, Richard Barnes, Nick
     Sullivan, Elie Bursztein, Michael Bailey, J. Alex Halderman, and
     Vern Paxson. "The Security Impact of HTTPS Interception." In
     Proceedings of the 24th Annual Network and Distributed System
