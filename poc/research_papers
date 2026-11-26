@@ -1,0 +1,63 @@
+RESEARCH PAPERS
+
+[1] Doowon Kim, Bum Jun Kwon, and Tudor Dumitras. "Certified Malware:
+    Measuring Breaches of Trust in the Windows Code-Signing PKI." In
+    Proceedings of the 2017 ACM SIGSAC Conference on Computer and
+    Communications Security (CCS '17), Dallas, TX, USA, 2017,
+    pp. 1435-1448.
+    Link: https://acmccs.github.io/papers/p1435-kimA.pdf
+    Relation: Models how malware authors obtain valid code-signing
+    certificates and subvert the Windows code-signing PKI. Maps to
+    DarkHotel's use of digitally-signed backdoors to defeat trust-based
+    defences.
+
+[2] Stevens Le Blond, Adina Uritesc, Cedric Gilbert, Zheng Leong Chua,
+    Prateek Saxena, and Engin Kirda. "A Look at Targeted Attacks Through
+    the Lense of an NGO." In Proceedings of the 23rd USENIX Security
+    Symposium (USENIX Security '14), San Diego, CA, USA, 2014,
+    pp. 543-558.
+    Link: https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/le-blond
+    Relation: Four-year study of tailored, socially-engineered targeted
+    attacks, where most intrusions reused disclosed (not zero-day) bugs.
+    Maps to DarkHotel's selective targeting and its economising of
+    zero-days for high-value victims only.
+
+[3] Grant Ho, Aashish Sharma, Mobin Javed, Vern Paxson, and David
+    Wagner. "Detecting Credential Spearphishing in Enterprise Settings."
+    In Proceedings of the 26th USENIX Security Symposium (USENIX
+    Security '17), Vancouver, BC, Canada, 2017, pp. 469-485.
+    Link: https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/ho
+    Relation: Builds a spear-phishing taxonomy and an enterprise
+    detector under extreme base-rate conditions. Maps to spear-phishing,
+    DarkHotel's primary delivery vector after 2015 (defender's side).
+
+[4] Laszlo Szekeres, Mathias Payer, Tao Wei, and Dawn Song. "SoK:
+    Eternal War in Memory." In Proceedings of the 2013 IEEE Symposium on
+    Security and Privacy (S&P '13), Berkeley, CA, USA, 2013, pp. 48-62.
+    Link: https://www.ieee-security.org/TC/SP2013/papers/4977a048.pdf
+    Relation: Systematises memory-corruption attacks and defences. Maps
+    to the Flash/IE zero-days DarkHotel exploited (e.g. CVE-2014-0497,
+    CVE-2018-8373) and the mitigations such exploits must defeat.
+
+[5] Kevin Z. Snow, Fabian Monrose, Lucas Davi, Alexandra Dmitrienko,
+    Christopher Liebchen, and Ahmad-Reza Sadeghi. "Just-In-Time Code
+    Reuse: On the Effectiveness of Fine-Grained Address Space Layout
+    Randomization." In Proceedings of the 2013 IEEE Symposium on
+    Security and Privacy (S&P '13), Berkeley, CA, USA, 2013,
+    pp. 574-588.
+    Link: https://www.ieee-security.org/TC/SP2013/program.html
+    Relation: Introduces JIT-ROP, bypassing fine-grained ASLR by
+    assembling ROP gadgets at exploit time. Maps to the exploitation
+    technique class needed to reliably compromise the hardened client
+    software DarkHotel targeted.
+
+[6] Zakir Durumeric, Zane Ma, Drew Springall, Richard Barnes, Nick
+    Sullivan, Elie Bursztein, Michael Bailey, J. Alex Halderman, and
+    Vern Paxson. "The Security Impact of HTTPS Interception." In
+    Proceedings of the 24th Annual Network and Distributed System
+    Security Symposium (NDSS '17), San Diego, CA, USA, 2017.
+    Link: https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/security-impact-https-interception
+    Relation: Characterises on-path middleboxes that intercept and
+    re-originate TLS traffic, degrading connection security (including
+    to update servers). Maps to the on-path hotel-network position
+    DarkHotel used to inject fraudulent software updates.
